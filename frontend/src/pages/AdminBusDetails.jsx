@@ -17,7 +17,7 @@ function AdminBusDetails() {
   const fetchBookings = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:5001/admin/bus/${busId}/bookings`,
+        `https://bus-ticketing-app-mfon.onrender.com/admin/bus/${busId}/bookings`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -37,7 +37,7 @@ function AdminBusDetails() {
 
     try {
       await axios.post(
-        `http://localhost:5001/admin/bus/${busId}/reset`,
+        `https://bus-ticketing-app-mfon.onrender.com/admin/bus/${busId}/reset`,
         {},
         {
           headers: {

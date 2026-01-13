@@ -14,7 +14,7 @@ function Login() {
     setError("");
 
     try {
-      const res = await axios.post("http://localhost:5001/auth/login", {
+      const res = await axios.post("https://bus-ticketing-app-mfon.onrender.com/auth/login", {
         email,
         password,
       });

@@ -9,7 +9,7 @@ function Buses() {
   const token = localStorage.getItem("token");
 
   const fetchBuses = async () => {
-    const res = await axios.get("http://localhost:5001/buses", {
+    const res = await axios.get("https://bus-ticketing-app-mfon.onrender.com/buses", {
       headers: { Authorization: `Bearer ${token}` },
     });
     setBuses(res.data);
@@ -31,7 +31,7 @@ function Buses() {
     try {
       for (let seat of selectedSeats) {
         await axios.post(
-          "http://localhost:5001/bookings",
+          "https://bus-ticketing-app-mfon.onrender.com/bookings",
           { busId: selectedBus._id, seatNumber: seat },
           { headers: { Authorization: `Bearer ${token}` } }
         );

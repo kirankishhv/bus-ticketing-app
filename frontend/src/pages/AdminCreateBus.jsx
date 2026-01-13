@@ -16,7 +16,7 @@ function AdminCreateBus() {
   const createBus = async () => {
     try {
       await axios.post(
-        "http://localhost:5001/admin/bus",
+        "https://bus-ticketing-app-mfon.onrender.com/admin/bus",
         {
           busNumber,
           source,

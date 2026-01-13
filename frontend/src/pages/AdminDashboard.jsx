@@ -33,7 +33,7 @@ function AdminDashboard() {
   const fetchAdminData = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5001/admin/bookings",
+        "https://bus-ticketing-app-mfon.onrender.com/admin/bookings",
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -51,7 +51,7 @@ function AdminDashboard() {
 
   const fetchBuses = async () => {
     try {
-      const res = await axios.get("http://localhost:5001/buses", {
+      const res = await axios.get("https://bus-ticketing-app-mfon.onrender.com/buses", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setBuses(res.data);

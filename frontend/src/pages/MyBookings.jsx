@@ -5,7 +5,7 @@ function MyBookings() {
   const [bookings, setBookings] = useState([]);
 
   const fetchBookings = async () => {
-    const res = await axios.get("http://localhost:5001/bookings/my", {
+    const res = await axios.get("https://bus-ticketing-app-mfon.onrender.com/bookings/my", {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
@@ -18,7 +18,7 @@ function MyBookings() {
   }, []);
 
   const cancelBooking = async (id) => {
-    await axios.delete(`http://localhost:5001/bookings/${id}`, {
+    await axios.delete(`https://bus-ticketing-app-mfon.onrender.com/bookings/${id}`, {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
